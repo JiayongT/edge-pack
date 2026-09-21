@@ -1,6 +1,6 @@
 # tui/screens/step2.py — Step 2: profile review and optional add-on selection
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 from __future__ import annotations
 

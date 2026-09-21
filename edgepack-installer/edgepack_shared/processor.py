@@ -1,6 +1,6 @@
 # edgepack_shared/processor.py — YAML template processor (UI-agnostic)
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 import os
 import sys

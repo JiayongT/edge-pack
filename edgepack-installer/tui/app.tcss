@@ -263,6 +263,8 @@ Footer {
 
 #step1-scroll {
     height: 1fr;
+    /* Floor the selectors so the EdgePack Version box isn't clipped on small terminals. */
+    min-height: 11;
     border: round $primary 60%;
     border-title-color: $accent;
     border-title-style: bold;
@@ -271,6 +273,10 @@ Footer {
 
 #step1-notes-box {
     height: auto;
+    /* Cap the informational notes so they yield space to the selectors above. */
+    max-height: 8;
+    overflow-y: auto;
+    scrollbar-size-vertical: 1;
     border: round $primary 60%;
     border-title-color: $accent;
     border-title-style: bold;
@@ -378,6 +384,8 @@ Footer {
 #step2-outer {
     height: 1fr;
     padding: 1 2;
+    /* Scroll the whole step if the min-height regions don't fit a small terminal. */
+    overflow-y: auto;
 }
 
 /* ── Base profile box ── */
@@ -386,6 +394,10 @@ Footer {
     border-title-color: $accent;
     border-title-style: bold;
     height: auto;
+    /* Cap the base list so it can't starve the optional add-ons region. */
+    max-height: 9;
+    overflow-y: auto;
+    scrollbar-size-vertical: 1;
     padding: 1 1;
     margin-bottom: 1;
 }
@@ -409,6 +421,8 @@ Footer {
 
 #s2-addons-scroll {
     height: 1fr;
+    /* Never let the optional section shrink below a usable size. */
+    min-height: 7;
     border: round $primary 60%;
     padding: 0 1;
     margin-top: 0;
@@ -495,7 +509,11 @@ Footer {
 #s2-selected-summary {
     color: $accent;
     padding: 0 1;
-    height: 1;
+    /* Wrap the selected list instead of clipping it to one line; scroll if long. */
+    height: auto;
+    max-height: 3;
+    overflow-y: auto;
+    scrollbar-size-vertical: 1;
 }
 
 /* ── Action buttons ── */

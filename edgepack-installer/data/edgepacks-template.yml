@@ -1,17 +1,5 @@
-version: "0.2-0002" # edgepack manifest version . version for this file in <edgepack-UI compatible version>-<versions for this yml file change>
-updated_datetime: "2026-06-26T05:20:00Z"  # date -u +"%Y-%m-%dT%H:%M:%SZ" 
-
-about:
-  product_name: "Intel Edgepack Installer"
-  description: |
-    A terminal-based wizard for installing Intel EdgePack
-    software packages on supported Linux platforms.
-
-    The installer auto-detects your hardware platform and OS,
-    then guides you through profile selection, add-on packages,
-    an installation summary, and live apt progress.
-  license: "License placeholder"
-  built_with: "Textual (https://textual.textualize.io)"
+version: "2026.2-0001" # edgepack manifest version . version for this file in <edgepack-UI compatible version>-<versions for this yml file change>
+updated_datetime: "2026-09-21T02:20:00Z"  # date -u +"%Y-%m-%dT%H:%M:%SZ"
 
 os_variant:
   ubuntu_noble:
@@ -60,6 +48,7 @@ platforms:
       # Core Ultra X (High-Power Premium)
       - "338H"
       - "358H"
+      - "356H"
       - "368H"
       - "388H"
       # Core Ultra H-Series
@@ -71,6 +60,9 @@ platforms:
     display_name: "Wildcat Lake"
     description: "Intel Wildcat Lake"
     model_names:
+      - "304"
+      - "305"
+      - "310"
       - "320"
       - "330"
       - "350"  

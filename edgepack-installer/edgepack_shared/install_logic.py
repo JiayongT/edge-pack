@@ -1,6 +1,6 @@
 # edgepack_shared/install_logic.py — apt installation logic (UI-agnostic)
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 import os
 import shlex
