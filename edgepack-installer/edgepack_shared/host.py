@@ -1,6 +1,6 @@
 # edgepack_shared/host.py — host OS detection helpers (UI-agnostic)
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 """Read /etc/os-release on the host.
 

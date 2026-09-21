@@ -1,6 +1,6 @@
 # tui/screens/step4.py — Step 4: apt installation with live progress and log
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 from __future__ import annotations
 

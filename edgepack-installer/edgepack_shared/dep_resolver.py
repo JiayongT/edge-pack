@@ -18,7 +18,7 @@
 # Output: one "name=version" (or bare "name") per line, consumed by $PKGS
 # in the install shell script.
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 import re
 import subprocess  # nosec B404 - reviewed: only used with list-form args (no shell=True), fixed apt/dpkg commands, no untrusted input passed to a shell

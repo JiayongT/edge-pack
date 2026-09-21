@@ -2,7 +2,7 @@
 #
 # Run from the ui/ directory:  python -m tui
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 import argparse
 import os

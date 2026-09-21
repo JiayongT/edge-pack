@@ -10,7 +10,7 @@
 # Reuses the same Processor/package_logic/install_logic building blocks as
 # the TUI so both paths resolve packages and prerequisites identically.
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 from __future__ import annotations
 

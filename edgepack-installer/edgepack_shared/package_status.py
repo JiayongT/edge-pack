@@ -1,6 +1,6 @@
 # shared/package_status.py — detect previously installed Intel Edge packages
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 """Query which packages are already installed on the host and compare versions.
 

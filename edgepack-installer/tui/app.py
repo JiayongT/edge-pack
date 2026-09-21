@@ -1,6 +1,6 @@
 # tui/app.py — EdgePackTUI application class and shared installer state
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 from __future__ import annotations
 
@@ -20,6 +20,7 @@ from edgepack_shared.host import (
     host_kernel_release, host_kernel_dot_version, host_kernel_is_ubuntu,
 )
 from edgepack_shared.log import ep_logger
+from tui.screens.about import PRODUCT_NAME
 from tui.__version__ import __version__
 
 # Resolve the CSS file path for both normal execution and PyInstaller bundles.
@@ -130,6 +131,8 @@ class EdgePackTUI(App[None]):
     CSS_PATH = _CSS_FILE
     CSS = _256_CSS
     TITLE = "Intel Edgepack Installer"
+
+    ENABLE_COMMAND_PALETTE = False
 
     BINDINGS = [
         ("ctrl+q", "quit",       "Quit"),
@@ -286,10 +289,8 @@ class EdgePackTUI(App[None]):
             except OSError:
                 pass  # file may not exist — ignore
         
-        # Set header title from template so version is maintained in one place.
-        _about = self.processor._data.get("about") or {}
-        _name = _about.get("product_name") or "Intel Edgepack Installer"
-        self.title = f"{_name} - v{__version__}"
+        # Header title uses the static About info so version stays in one place.
+        self.title = f"{PRODUCT_NAME} - v{__version__}"
         self.logger.info("App mounted: title=%s", self.title)
 
         if not _TRUECOLOR:

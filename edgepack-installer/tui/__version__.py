@@ -1,6 +1,6 @@
 # tui/__version__.py — single source of truth for the TUI application version
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 #
 # This is the only file that should be edited when bumping the TUI version.
 # Everything else (tui_version in EdgePackTUI, the update-compatibility check

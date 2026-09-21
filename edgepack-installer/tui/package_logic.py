@@ -4,7 +4,7 @@
 # These are extracted from the GUI's step2/step3/step4 mixin methods so that
 # both the GUI and TUI can share the same business logic.
 #
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MIT
 
 from __future__ import annotations
 

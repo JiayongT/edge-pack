@@ -41,8 +41,8 @@ Edge Pack is a curated collection of Intel-validated software packages and drive
 
 | Platform | Supported SKUs (CPU model) |
 |---|---|
-| Intel Panther Lake (PTL) | 338H, 358H, 368H, 388H, 325H, 345H, 355H, 375H |
-| Intel Wildcat Lake (WCL) | 320, 330, 350 |
+| Intel Panther Lake (PTL) | 338H, 358H, 356H, 368H, 388H, 325H, 345H, 355H, 375H |
+| Intel Wildcat Lake (WCL) | 304, 305, 310, 320, 330, 350 |
 
 ## Getting Started
 
