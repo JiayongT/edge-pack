@@ -33,34 +33,18 @@ a supported combination.
 ></iframe>
 hide_directive-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 > [!WARNING]
-> Start with a fresh Ubuntu 24.04.5.1 or Ubuntu 26.04.1 Desktop installation on a
-> supported Panther Lake or Wildcat Lake platform. Confirm the
-> [system requirements](./get-started/system-requirements.md), including the
+> </br>Start with a fresh Ubuntu 24.04.5.1 or Ubuntu 26.04.1 Desktop installation on a
+> supported Panther Lake or Wildcat Lake platform. 
+> </br>Confirm the [system requirements](./get-started/system-requirements.md), including the
 > Ubuntu kernel requirement, before installing.
 
 These public installation instructions use Intel's signed APT repository at
 <https://apt.repos.intel.com/edgepack/> and the
 [public installer releases](https://github.com/open-edge-platform/edge-pack/releases).
 
-Updating Ubuntu to the latest Stable Release Update (SRU) kernel is optional
-when the ISO's kernel already meets the system requirements. To update:
+📌 **Note:** Updating Ubuntu to the latest Stable Release Update (SRU) Kernel is optional
+when the ISO's Kernel already meets the system requirements. To update:
 
 ```bash
 sudo apt update
@@ -68,7 +52,7 @@ sudo apt upgrade
 sudo reboot
 ```
 
-Skip this upgrade if you intend to retain the supported kernel supplied by the ISO.
+📌 **Note:** Skip this upgrade if you intend to retain the supported kernel supplied by the ISO.
 
 For console-only deployments, complete the installation first, then follow
 [Convert Ubuntu Desktop to Behave Like Ubuntu Server](./ubuntu-desktop-remove-display.md).

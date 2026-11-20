@@ -39,6 +39,66 @@ base installation. Do not add a blanket Kobuk source for both Ubuntu releases.
 5. Add any profile-specific prerequisite repositories.
 6. Refresh package metadata and install the resolved metapackages.
 
+The following command line is terminal instruction that represent the steps action above:
+```bash
+## Preparing Intel Kobuk GPG repository key
+curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0c0e6af955ce463c03fc51574d098d70afbe5e1f" | sudo gpg --yes --dearmor -o "/etc/apt/keyrings/kobuk-ppa.gpg"
+
+## Applying Intel Kobuk PPA (for Ubuntu24.04 Noble)
+$ sudo tee /etc/apt/sources.list.d/kobuk-ppa.sources > /dev/null <<EOF
+Types: deb
+URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/${KOBUK_SNAPSHOT}/
+Suites: noble
+Components: main
+Signed-By: /etc/apt/keyrings/kobuk-ppa.gpg
+EOF
+
+## Applying Intel Kobuk PPA (for Ubuntu26.04 Resolute)
+$ sudo tee /etc/apt/sources.list.d/kobuk-ppa.sources > /dev/null <<EOF
+Types: deb
+URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/${KOBUK_SNAPSHOT}/
+Suites: resolute
+Components: main
+Signed-By: /etc/apt/keyrings/kobuk-ppa.gpg
+EOF
+
+## Preparing Intel Edge Pack GPG repository key
+curl -fsSL "https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB" | sudo gpg --yes --dearmor -o "/etc/apt/keyrings/intel-edge-pack.gpg"
+
+## Applying Intel Edge Pack PPA (for Ubuntu24.04 Noble)
+$ sudo tee /etc/apt/sources.list.d/intel-edge-pack.sources > /dev/null <<EOF
+# External repo
+Types: deb
+URIs: https://apt.repos.intel.com/edgepack
+Suites: noble
+Components: stable
+Signed-By: /etc/apt/keyrings/intel-edge-pack.gpg
+Enabled: yes
+EOF
+
+## Applying Intel Edge Pack PPA (for Ubuntu26.04 Resolute)
+$ sudo tee /etc/apt/sources.list.d/intel-edge-pack.sources > /dev/null <<EOF
+# External repo
+Types: deb
+URIs: https://apt.repos.intel.com/edgepack
+Suites: resolute
+Components: stable
+Signed-By: /etc/apt/keyrings/intel-edge-pack.gpg
+Enabled: yes
+EOF
+
+## Pinning Edge Pack repository to highest priority
+$ sudo tee /etc/apt/preferences.d/intel-edge-pack > /dev/null <<EOF
+Package: *
+Pin: origin apt.repos.intel.com
+Pin-Priority: 1001
+EOF
+
+## Install Edge Pack
+sudo apt update
+sudo apt install intel-edge-base-standard
+```
+
 After installation, reboot to load the installed kernel and drivers:
 
 ```bash

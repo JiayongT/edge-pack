@@ -25,26 +25,21 @@
   - Ubuntu Kernel 7.0+ generic
 
 Download the Desktop ISO from the official Ubuntu release pages for
-[24.04](https://releases.ubuntu.com/24.04/) or
-[26.04](https://releases.ubuntu.com/resolute/).
+[24.04.5.1](https://releases.ubuntu.com/24.04/ubuntu-24.04.5.1-desktop-amd64.iso) or
+[26.04.1](https://releases.ubuntu.com/resolute/ubuntu-26.04.1-desktop-amd64.iso).
+
+
 For headless deployments, start with the supported Desktop installation, install
 Edge Pack, then follow the [headless conversion guide](../ubuntu-desktop-remove-display.md).
 An Ubuntu Server ISO is not a substitute for this installation workflow.
-
-The release instructions describe realtime support only for Ubuntu 26.04.
-However, the current installer manifest disables `base-realtime`, so the TUI,
-installer CLI, and generated APT instructions do not currently offer that profile.
-Do not install `intel-edge-base-realtime` based on the release instructions alone.
 
 **Access**:
 
 - Administrative privileges and network access to the configured package repositories
 
-Edge Pack packages come from Intel's public APT repository at
+📌 **Note:** Edge Pack packages come from Intel's public APT repository at
 <https://apt.repos.intel.com/edgepack/>. Installer binaries are published on the
-[public GitHub releases page](https://github.com/open-edge-platform/edge-pack/releases).
-
-Consult the [project README](https://github.com/open-edge-platform/edge-pack/blob/main/README.md)
+[public GitHub releases page](https://github.com/open-edge-platform/edge-pack/releases). Consult the [project README](https://github.com/open-edge-platform/edge-pack/blob/main/README.md)
 for the current platform and SKU matrix. The manifest remains authoritative when this guide
 and a released installer differ.
 

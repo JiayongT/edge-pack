@@ -10,6 +10,16 @@ The installer CLI is the non-interactive counterpart to the TUI (terminal user i
 It performs the same host, profile, add-on, repository, and dependency checks, making it
 the preferred automation interface when a terminal wizard is unsuitable.
 
+## Verify the Release Download
+
+Download the installer and its published SHA-256 checksum from the latest [GitHub release](https://github.com/open-edge-platform/edge-pack/releases). Always verify the binary before running it:
+
+```bash
+sha256sum -c edgepack-installer.sha256
+```
+
+📌 **Note:** Do not run the installer when its checksum does not match.
+
 ## List Profiles
 
 ```bash
@@ -32,27 +42,3 @@ release and platform.
 The command exits without changing packages when host validation or profile
 compatibility fails. It does not prompt for confirmation, so review the command
 before using it in automation.
-
-## Verify the Release Download
-
-The selector downloads the installer and its published SHA-256 checksum from
-the latest GitHub release. Always verify the binary before running it:
-
-```bash
-sha256sum -c edgepack-installer.sha256
-```
-
-Do not run the installer when its checksum does not match.
-
-## Run from Source
-
-For development checkouts:
-
-```bash
-cd edgepack-installer
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python3 -m tui list
-sudo .venv/bin/python -m tui install base-standard ffmpeg
-```
