@@ -47,7 +47,7 @@ curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x0c0e6af955ce
 ## Applying Intel Kobuk PPA (for Ubuntu24.04 Noble)
 $ sudo tee /etc/apt/sources.list.d/kobuk-ppa.sources > /dev/null <<EOF
 Types: deb
-URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/${KOBUK_SNAPSHOT}/
+URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/20260830T100000Z/
 Suites: noble
 Components: main
 Signed-By: /etc/apt/keyrings/kobuk-ppa.gpg
@@ -56,7 +56,7 @@ EOF
 ## Applying Intel Kobuk PPA (for Ubuntu26.04 Resolute)
 $ sudo tee /etc/apt/sources.list.d/kobuk-ppa.sources > /dev/null <<EOF
 Types: deb
-URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/${KOBUK_SNAPSHOT}/
+URIs: https://snapshot.ppa.launchpadcontent.net/kobuk-team/intel-graphics/ubuntu/20260830T100000Z/
 Suites: resolute
 Components: main
 Signed-By: /etc/apt/keyrings/kobuk-ppa.gpg

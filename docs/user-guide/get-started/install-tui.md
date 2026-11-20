@@ -57,7 +57,8 @@ sha256sum -c edgepack-installer.sha256
 All Edge Pack Installer activities is written to:
 
 ```text
-/var/log/edgepack/edgepack-installer.log
+/var/log/edgepack/edgepack-installer-<timestamp>.log
+/var/log/edgepack/edgepack-packages-<timestamp>.log
 ```
 
-📌 **Note:** Include this log when reporting an installation failure, after reviewing it for deployment-specific information.
+📌 **Note:** `edgepack-installer-<timestamp>.log` consist status of APT installation log while `edgepack-packages-<timestamp>.log` includes list of installed packages by Edge Pack TUI installer. Include these logs when reporting an installation failure, after reviewing it for deployment-specific information.
