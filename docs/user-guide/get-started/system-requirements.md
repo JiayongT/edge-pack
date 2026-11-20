@@ -19,17 +19,27 @@
 **Software**:
 
 - Linux Distribution:
-  - Ubuntu 24.04.4+ (Desktop)
-  - Ubuntu 26.04 (Desktop)
+  - Fresh Ubuntu 24.04.5.1 (Noble) Desktop installation
+  - Fresh Ubuntu 26.04.1 (Resolute) Desktop installation
 - Kernel Version:
   - Ubuntu Kernel 7.0+ generic
-  - Ubuntu Kernel 7.0+ real-time (Ubuntu 26.04 only)
+
+Download the Desktop ISO from the official Ubuntu release pages for
+[24.04.5.1](https://releases.ubuntu.com/24.04/ubuntu-24.04.5.1-desktop-amd64.iso) or
+[26.04.1](https://releases.ubuntu.com/resolute/ubuntu-26.04.1-desktop-amd64.iso).
+
+
+For headless deployments, start with the supported Desktop installation, install
+Edge Pack, then follow the [headless conversion guide](../ubuntu-desktop-remove-display.md).
+An Ubuntu Server ISO is not a substitute for this installation workflow.
 
 **Access**:
 
 - Administrative privileges and network access to the configured package repositories
 
-Consult the [project README](https://github.com/open-edge-platform/edge-pack/blob/main/README.md)
+📌 **Note:** Edge Pack packages come from Intel's public APT repository at
+<https://apt.repos.intel.com/edgepack/>. Installer binaries are published on the
+[public GitHub releases page](https://github.com/open-edge-platform/edge-pack/releases). Consult the [project README](https://github.com/open-edge-platform/edge-pack/blob/main/README.md)
 for the current platform and SKU matrix. The manifest remains authoritative when this guide
 and a released installer differ.
 

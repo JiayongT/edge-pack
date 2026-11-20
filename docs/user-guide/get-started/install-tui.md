@@ -22,6 +22,8 @@ To start, follow the steps:
    sudo ./edgepack-installer
    ```
 
+   📌 **Note:** The public installer uses signed repositories at `https://apt.repos.intel.com/edgepack`.
+
 3. Go through a 4-step wizard.
 
    - Confirm the detected platform and choose a base profile.
@@ -50,89 +52,13 @@ sha256sum -c edgepack-installer.sha256
 ```
 
 
-## Logs
+## Finding the Logs
 
-Installation activity is written to:
+All Edge Pack Installer activities is written to:
 
 ```text
-/var/log/edgepack/edgepack-installer.log
+/var/log/edgepack/edgepack-installer-<timestamp>.log
+/var/log/edgepack/edgepack-packages-<timestamp>.log
 ```
 
-Include this log when reporting an installation failure, after reviewing it for
-deployment-specific information.
-
-
-
-## How to Run from Source
-
-### Requirements
-
-- Python **3.10** or newer
-- A terminal that supports 256 colours
-
-### Steps
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/open-edge-platform/edge-pack.git
-cd edge-pack/edgepack-installer
-
-# 2. (Recommended) Create a virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Run the TUI wizard (Ubuntu 24.04 / 26.04 only, requires sudo)
-python3 -m tui
-
-# Or install a profile directly from the CLI, no wizard (requires sudo)
-sudo python3 -m tui install base-standard npu
-
-# List available base profiles and add-ons
-python3 -m tui list
-```
-
----
-
-## How to Build a Standalone Executable (PyInstaller)
-
-The installer can be packaged into a single self-contained binary that requires no Python or
-dependencies on the target machine.
-
-> [!NOTE]
-> Build on **Ubuntu 24.04 (Noble)** to ensure glibc compatibility with target
-  machines running Ubuntu 24.04 or 26.04.
-
-```bash
-# 1. Install binutils
-sudo apt install binutils
-
-# 2. Install PyInstaller
-pip install pyinstaller
-
-# 3. Build (uses edgepack-installer.spec)
-./build.sh
-
-# Output: dist/edgepack-installer
-```
-
-The `build.sh` script installs PyInstaller, runs the spec, and reports the output path.
-
-### Distributing the Binary
-
-Copy `dist/edgepack-installer` to the target machine and run:
-
-```bash
-# Run the TUI wizard
-./edgepack-installer
-
-# Install a profile directly from the CLI, no wizard (requires sudo)
-sudo ./edgepack-installer install base-standard npu
-
-# List available base profiles and add-ons
-./edgepack-installer list
-```
-
-No Python, no pip, no dependencies needed on the target.
+📌 **Note:** `edgepack-installer-<timestamp>.log` consist status of APT installation log while `edgepack-packages-<timestamp>.log` includes list of installed packages by Edge Pack TUI installer. Include these logs when reporting an installation failure, after reviewing it for deployment-specific information.

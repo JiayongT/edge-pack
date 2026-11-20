@@ -17,17 +17,17 @@
   </a>
 </div>
 hide_directive-->
-> [!NOTE]
+>📌 **Note:** 
 > Edge Pack is currently available as a technical preview for evaluation purposes, we do not
 > recommend this early version for use in production environments.
 <!--hide_directive
 ::::
 hide_directive-->
 
-Enable the full potential of Intel hardware on Linux for edge use cases.
-
 Edge Pack is a set of modular platform software packages that add key functionalities to
-your operating system, including graphics, media, edge AI, networking, and manageability.
+your operating system, including graphics, media, edge AI, networking, and manageability by exposing full potential of Intel hardware capability throughout Linux ecosystem.
+
+
 Prepared for different technical domains, Edge Pack offers the right setup for a particular
 system or workload.
 
@@ -42,7 +42,7 @@ foundation before any add-on can be installed.
 <!--hide_directive ::: hide_directive-->
 <!--hide_directive :::{grid-item-card} hide_directive--> Add-on profiles
 
-Optional package groups layered on top of a base profile, each enabling a specific
+Optional package group layered on top of a base profile, each enabling a specific
 Intel platform capability.
 <!--hide_directive ::: hide_directive-->
 <!--hide_directive :::{grid-item-card} hide_directive--> Platform and OS validation
@@ -61,20 +61,23 @@ Conflicting or unsupported combinations are flagged before anything is installed
 
 | Profile         | Name                    | Description                                   |
 |-----------------|-------------------------|-----------------------------------------------|
-| `base-standard` | Intel Edge Base Profile | Validated core Intel graphics/media packages, including the platform-enablement Dynamic Kernel Module Support driver, for Ubuntu LTS |
+| `intel-edge-base-standard` | Intel Edge Base Profile | Enables core Intel graphics/media packages, including the platform-enablement Dynamic Kernel Module Support driver and AI Compute Runtime engine for Ubuntu LTS |
+| `intel-edge-base-realtime` | Intel Edge Base Realtime Profile | Enables core base funtionality with realtime features for Ubuntu26.04 LTS |
 
 **Add-on Profiles**
 
 | Profile | Name | Description |
 |-----------------|---------------|---------------------------------------------------------|
-| `ffmpeg`        | FFmpeg        | FFmpeg multimedia framework with Intel GPU support      |
-| `gstreamer`     | GStreamer     | GStreamer multimedia framework with Intel GPU support   |
-| `npu`           | NPU           | Enables Intel's Neural Processing Unit (NPU) technology on edge platforms |
-| `manageability` | Manageability | Enables Intel® vPro® manageability on edge platforms    |
+| `intel-edge-media-ffmpeg` | FFmpeg | FFmpeg multimedia framework with Intel GPU support |
+| `intel-edge-media-gst` | GStreamer | GStreamer multimedia framework with Intel GPU support |
+| `intel-edge-npu` | NPU | Enables Intel's Neural Processing Unit (NPU) technology on edge platforms. |
+| `intel-edge-manageability` | Manageability | Enables Intel® vPro® manageability on edge platforms. |
+| `intel-edge-ipu` | IPU | Enables Intel's Image Processing Unit (IPU) technology on Edge platforms. |
+| `intel-edge-tsn` | TSN | Enables Intel's Time-Sensitive Networking (TSN) technology on Edge platforms. |
 
 
 
-Currently, Edge Pack supports Ubuntu Desktop LTS 24.04.5 (Noble) and LTS 26.04.1 (Resolute),
+Currently, Edge Pack supports fresh Ubuntu Desktop LTS 24.04.5.1 (Noble) and LTS 26.04.1 (Resolute) installations,
 deployed on Intel® Core™ Ultra Series 3 (formerly codenamed as Panther Lake) and
 Intel® Core™ Series 3.
 See [system requirements](./get-started/system-requirements.md) for more details.
