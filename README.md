@@ -31,6 +31,7 @@ capabilities needed for a particular system or workload.
 | Profile | Name | Description |
 |---|---|---|
 | `base-standard` | Intel Edge Base Profile | Graphics and media software with AI compute support |
+| `base-realtime` | Intel Edge Realtime Profile | TSN, Graphics and media software with AI compute support |
 
 ### Add-on Profiles
 
@@ -38,8 +39,9 @@ capabilities needed for a particular system or workload.
 |---|---|---|
 | `ffmpeg` | FFmpeg | FFmpeg multimedia framework with Intel GPU support |
 | `gstreamer` | GStreamer | GStreamer multimedia framework with Intel GPU support |
-| `npu` | NPU | Software to enable Intel's Neural Processing Unit (NPU) on Edge platforms |
 | `manageability` | Manageability | Software to enable Intel vPro manageability on Edge platforms |
+| `ipu` | IPU | Software to enable Intel's Image Processing Unit (IPU) on Edge platforms |
+| `tsn` | TSN | Software to enable Intel's Time-Sensitive Networking (TSN) on Edge platforms |
 
 
 ## Supported Platforms
@@ -58,7 +60,7 @@ the distinction from the release instructions' Ubuntu 26.04 realtime support.
 
 | Platform | Supported SKUs (CPU model) |
 |---|---|
-| Intel Panther Lake (PTL) | 338H, 358H, 356H, 368H, 388H, 325H, 345H, 355H, 375H |
+| Intel Panther Lake (PTL) | 315, 322, 325, 325H, 332, 335, 336H, 338H, 345H, 355, 355H, 356H, 358H, 360, 365, 366H, 368H, 375H, 386H, 388H |
 | Intel Wildcat Lake (WCL) | 304, 305, 310, 320, 330, 350 |
 
 ## Getting Started
